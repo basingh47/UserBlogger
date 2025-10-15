@@ -8,11 +8,12 @@ parameters:
         - database
         - routes
         - tests
-    
+
     excludePaths:
         - vendor/*
         - storage/*
         - bootstrap/cache/*
         - node_modules/*
-    
-    checkMissingIterableValueType: false
+
+    # Removed invalid 'checkMissingIterableValueType'
+    inferPrivatePropertyTypeFromConstructor: true
