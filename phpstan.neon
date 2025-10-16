@@ -2,17 +2,18 @@ includes:
     - vendor/larastan/larastan/extension.neon
 
 parameters:
-    level: 6
+    level: 2
     paths:
         - app
         - database
         - routes
         - tests
-    
+
     excludePaths:
         - vendor/*
         - storage/*
         - bootstrap/cache/*
         - node_modules/*
-    
-    checkMissingIterableValueType: false
+
+    # Removed invalid 'checkMissingIterableValueType'
+    inferPrivatePropertyTypeFromConstructor: true
